@@ -3950,3 +3950,9 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+/* Centrar el último artículo de los tiles si es un número impar */
+	#one.tiles article:last-child:nth-child(odd) {
+		margin-left: auto;
+    	margin-right: auto;
+	}
