@@ -3951,8 +3951,97 @@ input, select, textarea {
 			visibility: visible;
 		}
 
-/* Centrar el último artículo de los tiles si es un número impar */
+	/* Definición base para todas las marcas de agua
+	Usamos un pseudo-elemento ::after para poder controlar la opacidad de la imagen sin afectar la opacidad del texto. */
+	.tiles article::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 80%; /* Tamaño de la marca de agua respecto al cuadro */
+		background-position: center; /* Centrada horizontal y verticalmente */
+		background-repeat: no-repeat; /* Que no se repita */
+		opacity: 0.12; /* ESTE ES EL SECRETO DE LA MARCA DE AGUA. Súbelo (0.2, 0.3) o bájalo (0.05) para ajustar la sutilidad. */
+		z-index: 0; /* Queda detrás del texto */
+		transition: opacity 0.2s ease, background-size 0.2s ease; /* Efecto suave */
+	}
+
+	/* Aseguramos que el contenido esté por encima de la marca de agua */
+	.tiles article .major {
+		position: relative;
+		z-index: 2;
+	}
+
+	/* Colores de fondo (los que definimos antes) y asignación de imágenes */
+
+	/* HTML - Naranja */
+	.tiles article.bg-html { background-color: #E34F26; }
+	.tiles article.bg-html::after { background-image: url('../../images/html-5.png'); }
+
+	/* CSS - Azul */
+	.tiles article.bg-css { background-color: #1572B6; }
+	.tiles article.bg-css::after { background-image: url('../../images/css.png'); }
+
+	/* JavaScript - Amarillo */
+	.tiles article.bg-js { background-color: #F7DF1E; }
+	.tiles article.bg-js::after { background-image: url('../../images/js.png'); }
+	/* Estilo especial para texto oscuro en JS */
+	.tiles article.bg-js h3,
+	.tiles article.bg-js header p { color: #333333; }
+	.tiles article.bg-js .link::after { background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3%3Cpath d="M11.293 17.293l1.414-1.414L9.414 12l3.293-3.293-1.414-1.414L6.586 12z" fill="%3C%23333333" /%3E%3Cpath d="M12.707 17.293L16.121 13.879l-1.414-1.414L11.293 12l3.293-3.293-1.414-1.414L17.414 12z" fill="%3C%23333333" /%3E%3C/svg%3E'); }
+
+	/* Java - Azul Clásico */
+	.tiles article.bg-java { background-color: #5382A1; }
+	.tiles article.bg-java::after { background-image: url('../../images/java.png'); }
+
+	/* Python - Azul Acero */
+	.tiles article.bg-python { background-color: #3776AB; }
+	.tiles article.bg-python::after { background-image: url('../../images/python.png'); }
+
+	/* MySQL - Azul característico del delfín */
+	.tiles article.bg-mysql { background-color: #4479A1; }
+	.tiles article.bg-mysql::after { background-image: url('../../images/mysql.jpg'); }
+
+	/* GitHub - Gris Oscuro / Casi Negro */
+	.tiles article.bg-github { background-color: #24292e; }
+	.tiles article.bg-github::after { background-image: url('../../images/github.svg.png'); }
+
+	/* Jira - Azul Atlassian */
+	.tiles article.bg-jira { background-color: #0052CC; }
+	.tiles article.bg-jira::after { background-image: url('../../images/jira.png'); }
+
+	/* Figma - Púrpura Figma */
+	.tiles article.bg-figma { background-color: #A259FF; }
+	.tiles article.bg-figma::after { background-image: url('../../images/figma.png'); }
+
+	/* Efecto sutil al pasar el mouse */
+	.tiles article:hover::after {
+		opacity: 0.2; /* La marca de agua se vuelve un poquito más visible */
+		background-size: 85%; /* Y se agranda ligeramente */
+	}
+
+	/* Centrar el último artículo de los tiles si es un número impar */
 	#one.tiles article:last-child:nth-child(odd) {
-		margin-left: auto;
-    	margin-right: auto;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	#footer .icons {
+		text-align: center;
+		width: 100%;
+		padding-left: 0;
+		margin-bottom: 2rem;
+	}
+
+	#footer .icons li {
+		display: inline-block;
+		padding: 0 1rem;
+	}
+
+	/* Centrar el último artículo de las herramientas si es un número impar */
+	#tools-tiles.tiles article:last-child:nth-child(odd) {
+		margin-left: auto !important;
+		margin-right: auto !important;
 	}
