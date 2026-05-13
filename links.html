@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>mausquerramienta</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <style>
+        body {
+            background-color: #242943;
+            color: white;
+            font-family: 'Source Sans Pro', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #9bf1ff;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: white;
+            border: 2px solid white;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: #242943;
+        }
+
+        .button.primary {
+            background-color: #9bf1ff;
+            border-color: #9bf1ff;
+            color: #242943;
+        }
+
+        .button.primary:hover {
+            background-color: transparent;
+            color: #9bf1ff;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .cursor {
+            color: #9bf1ff;
+            font-weight: 300;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1><span id="typewriter"></span><span class="cursor">|</span></h1>
+        
+        <a href="https://www.linkedin.com/in/mauricio-ortegaj" class="button" target="_blank">LinkedIn Profile &nbsp;🤝🏽</a>
+        
+        <a href="https://github.com/mausquerramienta" class="button" target="_blank">GitHub Portfolio &nbsp;👾</a>
+        
+        <a href="assets/docs/Mauricio_Ortega_CV.pdf" class="button primary" download>Download My CV (PDF) &nbsp;📄</a>
+    </div>
+
+    <script>
+        const text = "Mauricio Ortega"; 
+        const speed = 120;
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        window.onload = typeWriter;
+    </script>
+
+</body>
+</html>
