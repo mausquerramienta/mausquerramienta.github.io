@@ -1,9 +1,20 @@
-/* Importar la fuente principal del portafolio */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
-/* 1. Fondo del Body con el Azul exacto de tu index (Python Blue #3776AB) */
+/* ============================================================================
+   [ MOLDE MAESTRO: VERSIÓN PYTHON ]
+============================================================================ */
+:root {
+    --bg-tech: #467a9e;         /* 1. Fondo Azul Acero */
+    --accent-btn: #FFD43B;      /* 2. Amarillo Python para botones y acentos */
+    --text-modal: #141f28;      /* 3. Azul marino casi negro para lectura perfecta en el modal */
+    --card-bg: #242943;         /* 4. Fondo oscuro fijo de las tarjetas */
+}
+
+/* ============================================================================
+   ESTRUCTURA BASE
+============================================================================ */
 body {
-    background-color: #3776AB !important; 
+    background-color: var(--bg-tech) !important; 
     color: #ffffff;
     font-family: "Source Sans Pro", Helvetica, sans-serif !important;
 }
@@ -13,9 +24,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-/* Imagen central de Python */
-.python-header-logo {
-    width: 90px;
+.tech-header-logo {
+    width: 155px; 
+    object-fit: contain;
     opacity: 0.95;
     margin-bottom: 15px;
     display: block;
@@ -23,24 +34,23 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 }
 
-/* ============================================================================
-   2. Neutralizar el conflicto de Bootstrap con los enlaces del Header y Menú
-============================================================================ */
+/* Neutralizar enlaces de Bootstrap en el Menú */
 #header a, #menu a {
     color: #ffffff !important;
     text-decoration: none !important;
-    border-bottom: none !important;
     box-shadow: none !important;
 }
 
 #header a:hover, #menu a:hover {
-    color: #FFD43B !important; /* Tono amarillo al pasar el mouse */
+    color: #9bf1ff !important; /* Celeste neón de la hamburguesa */
 }
 
-/* Estilos de las Cards (Fondo oscuro #242943 para contrastar hermoso con el azul claro) */
+/* ============================================================================
+   TARJETAS (CARDS)
+============================================================================ */
 .card {
-    background-color: #242943 !important;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: var(--card-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: #ffffff;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -57,53 +67,110 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem;
 }
 
+/* Botón universal "View Details" */
+.btn-view-details {
+    background-color: var(--accent-btn) !important;
+    color: var(--card-bg) !important; 
+    font-weight: 700;
+    border: none !important;
+    transition: all 0.2s ease;
+}
+
+.btn-view-details:hover {
+    background-color: #ffffff !important; 
+}
+
 /* ============================================================================
-   3. Eliminar la raya blanca fantasma (box-shadow inset) de la plantilla Forty
+   MODALES Y SUS BOTONES GEMELOS
 ============================================================================ */
-button, .btn, .btn-python, .btn-primary, .btn-close {
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-/* Botón Personalizado (Amarillo Python) */
-.btn-python {
-    color: #FFD43B !important;
-    border: 2px solid #FFD43B !important;
-    background-color: rgba(255, 212, 59, 0.1) !important;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-python:hover {
-    background-color: #FFD43B !important; 
-    color: #242943 !important; /* Texto oscuro para que resalte al hacer hover */
-}
-
-/* Sobrescribir estilos de los Modals */
 .modal-content {
-    background-color: #3776AB !important; /* Mismo azul claro del body */
-    color: #ffffff;
+    background-color: var(--bg-tech) !important; 
+    color: var(--text-modal) !important; 
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 8px;
 }
 
 .modal-header, .modal-footer {
-    border-color: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Botón de cierre 'X' en blanco */
+.modal-dialog {
+    margin-top: 5.5rem !important; 
+}
+
+/* Eliminar la sombra interna fantasma de Forty y resetear tipografía */
+button, .btn, .btn-close {
+    box-shadow: none !important;
+    outline: none !important;
+    letter-spacing: normal !important; 
+    text-transform: none !important;   
+    font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+}
+
+/* Geometría compartida para los botones del Footer del modal */
+.btn-github, .btn-modal-close {
+    background-color: #24292e !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 1.25rem !important;
+    border-radius: 6px !important;
+    transition: all 0.2s;
+    height: 38px !important; 
+    line-height: 1;
+}
+
+.btn-modal-close {
+    background-color: #000000 !important; 
+}
+
+.btn-github:hover, .btn-modal-close:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
 .btn-close {
     filter: invert(1);
     opacity: 0.8;
 }
 
-.btn-close:hover {
-    opacity: 1;
-}
+.btn-close:hover { opacity: 1; }
 
 /* ============================================================================
-   4. Proteger la cabecera de los Modals contra la Navbar fija
+   FOOTER (Alineación Flexbox horizontal)
 ============================================================================ */
-.modal-dialog {
-    margin-top: 5.5rem !important; 
+#footer {
+    background-color: #2a2f4a !important; 
+    padding: 2.5rem 0 2rem 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+#footer .inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    max-width: 65em;
+    margin: 0 auto;
+    padding: 0 2rem !important;
+}
+
+#footer .icons {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+#footer .copyright {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: right;
 }
