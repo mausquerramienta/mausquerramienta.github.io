@@ -1,0 +1,109 @@
+/* Importar la fuente principal del portafolio */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
+/* 1. Fondo del Body con el Azul exacto de tu index (Python Blue #3776AB) */
+body {
+    background-color: #3776AB !important; 
+    color: #ffffff;
+    font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+    font-weight: 600;
+}
+
+/* Imagen central de Python */
+.python-header-logo {
+    width: 90px;
+    opacity: 0.95;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================================================
+   2. Neutralizar el conflicto de Bootstrap con los enlaces del Header y Menú
+============================================================================ */
+#header a, #menu a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+#header a:hover, #menu a:hover {
+    color: #FFD43B !important; /* Tono amarillo al pasar el mouse */
+}
+
+/* Estilos de las Cards (Fondo oscuro #242943 para contrastar hermoso con el azul claro) */
+.card {
+    background-color: #242943 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: contain; 
+    background-color: #1a1e33;
+    padding: 2rem;
+}
+
+/* ============================================================================
+   3. Eliminar la raya blanca fantasma (box-shadow inset) de la plantilla Forty
+============================================================================ */
+button, .btn, .btn-python, .btn-primary, .btn-close {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Botón Personalizado (Amarillo Python) */
+.btn-python {
+    color: #FFD43B !important;
+    border: 2px solid #FFD43B !important;
+    background-color: rgba(255, 212, 59, 0.1) !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-python:hover {
+    background-color: #FFD43B !important; 
+    color: #242943 !important; /* Texto oscuro para que resalte al hacer hover */
+}
+
+/* Sobrescribir estilos de los Modals */
+.modal-content {
+    background-color: #3776AB !important; /* Mismo azul claro del body */
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+}
+
+.modal-header, .modal-footer {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Botón de cierre 'X' en blanco */
+.btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+/* ============================================================================
+   4. Proteger la cabecera de los Modals contra la Navbar fija
+============================================================================ */
+.modal-dialog {
+    margin-top: 5.5rem !important; 
+}
