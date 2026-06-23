@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Projects | mausquerramienta</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/sql.css">
+</head>
+<body class="is-preload">
+
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <a href="../index.html" class="logo"><strong>by mausquerramienta</strong></a>
+            <nav><a href="#menu">Menu</a></nav>
+        </header>
+
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About me</a></li>
+                <li><a href="../index.html#cv">CV</a></li>
+                <li><a href="../index.html#languages">Tech Stack</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#featured-projects">Featured projects</a></li>
+                <li><a href="../index.html#one">Projects by Technology</a></li>
+                <li><a href="../index.html#contact">Contact me</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div class="container mt-4 mb-5 pt-2">
+            
+            <div class="text-center mb-4">
+                <img src="../images/mysql.jpg" alt="Technology Logo" class="tech-header-logo">
+                <h1 class="page-title m-0" style="letter-spacing: 2px;">SQL TOOLKIT</h1>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Project Cards -->
+                <!-- Project 1 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../images/mysql.jpg" class="card-img-top" alt="Project Thumbnail">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">01 - Fundamental Queries</h5>
+                            <p class="card-text mb-4">Data extraction, result grouping (<code>GROUP BY</code>), mathematical aggregates, and sorting limits.</p>
+                            <button type="button" class="btn btn-view-details mt-auto" data-bs-toggle="modal" data-bs-target="#modal-proj-1">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../images/mysql.jpg" class="card-img-top" alt="Project Thumbnail">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">02 - Relational Joins</h5>
+                            <p class="card-text mb-4">Resolving 1:N and N:M relationships utilizing directional table junctions (<code>INNER</code>, <code>LEFT</code>, <code>RIGHT</code>).</p>
+                            <button type="button" class="btn btn-view-details mt-auto" data-bs-toggle="modal" data-bs-target="#modal-proj-2">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../images/mysql.jpg" class="card-img-top" alt="Project Thumbnail">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">03 - Subqueries</h5>
+                            <p class="card-text mb-4">Utilizing nested queries to filter and aggregate data based on dynamic conditions.</p>
+                            <button type="button" class="btn btn-view-details mt-auto" data-bs-toggle="modal" data-bs-target="#modal-proj-3">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../images/mysql.jpg" class="card-img-top" alt="Project Thumbnail">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">04 - Window Functions</h5>
+                            <p class="card-text mb-4">Applying analytical functions to perform calculations across a set of rows related to the current row.</p>
+                            <button type="button" class="btn btn-view-details mt-auto" data-bs-toggle="modal" data-bs-target="#modal-proj-4">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Project Modals -->
+        <!-- Modal for Project 1 -->
+        <div class="modal fade" id="modal-proj-1" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold">01 - Fundamental Queries</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <h6 class="text-dark mb-2">🧠 Core Concepts Applied</h6>
+                        <ul>
+                            <li>Data extraction and column aliasing (<code>SELECT</code>, <code>AS</code>).</li>
+                            <li>Result set collapsing (<code>GROUP BY</code>).</li>
+                            <li>Mathematical aggregations (<code>COUNT()</code>, <code>AVG()</code>).</li>
+                        </ul>
+                        <p class="mb-4">Transforms raw operational data into analytical insights without relying on complex table junctions.</p>
+                        
+                        <ul class="nav nav-tabs mb-3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="tab-runner-1" data-bs-toggle="tab" data-bs-target="#canvas-runner-1" type="button" role="tab">
+                                    ▶ Live Query Runner
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab-schema-1" data-bs-toggle="tab" data-bs-target="#canvas-schema-1" type="button" role="tab">
+                                    📐 Interactive Schema (ERD)
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="canvas-runner-1" role="tabpanel">
+                                <div class="card card-body bg-dark p-0 border-secondary">
+                                    <iframe src="https://onecompiler.com/mysql/44t6ux6uk?hideLanguageSelection=true&hideTitle=true" width="100%" height="420" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="canvas-schema-1" role="tabpanel">
+                                <div class="card card-body bg-dark p-0 border-secondary">
+                                    <iframe src="https://dbdiagram.io/e/6a3aed14d0074fe75d0a851e/6a3aed1ad0074fe75d0a8557" width="100%" height="450" frameborder="0" style="background: #ffffff;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <a href="https://github.com/mausquerramienta/SQL-Toolkit/tree/main/01-fundamental-queries" target="_blank" class="btn btn-github">
+                            <span class="icon brands fa-github" style="font-size: 1.15rem;"></span>
+                            <span>GitHub Code</span>
+                        </a>
+                        <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for Project 2 -->
+        <div class="modal fade" id="modal-proj-2" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold">02 - Relational Joins</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><p>Aquí irá el contenido del proyecto 2...</p></div>
+                    <div class="modal-footer justify-content-between">
+                        <a href="#" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
+                        <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Project 3 -->
+        <div class="modal fade" id="modal-proj-3" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold">03 - Subqueries</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><p>Aquí irá el contenido del proyecto 3...</p></div>
+                    <div class="modal-footer justify-content-between">
+                        <a href="#" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
+                        <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Project 4 -->
+        <div class="modal fade" id="modal-proj-4" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold">04 - Window Functions</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body"><p>Aquí irá el contenido del proyecto 4...</p></div>
+                    <div class="modal-footer justify-content-between">
+                        <a href="#" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
+                        <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://github.com/mausquerramienta" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/mauricio-ortegaj" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+                </ul>
+                <ul class="copyright"><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+            </div>
+        </footer>
+
+    </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener('shown.bs.tab', function (event) {
+            if (event.target.id === 'tab-schema-1') {
+                let iframe = document.querySelector('#canvas-schema-1 iframe');
+                iframe.src = iframe.src; 
+            }
+        });
+    </script>
+
+</body>
+</html>
