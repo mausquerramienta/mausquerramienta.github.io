@@ -1,3 +1,15 @@
+/* ==========================================================================
+   FORTY by HTML5 UP (Customized by Mauricio Ortega)
+   ==========================================================================
+   TABLA DE CONTENIDO (TOC):
+   01. Reset & Variables Base ......... Line ~25
+   02. Typography & Headings .......... Line ~180
+   03. Layout (Header, Menu, Footer) .. Line ~650
+   04. Components (Tiles, Buttons) .... Line ~1400
+   
+   ➔ [ EXTENSIÓN PERSONALIZADA ] ...... IR AL FINAL DEL ARCHIVO
+   ========================================================================== */
+
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
@@ -4044,4 +4056,359 @@ input, select, textarea {
 	#tools-tiles.tiles article:last-child:nth-child(odd) {
 		margin-left: auto !important;
 		margin-right: auto !important;
+	}
+	/* ============================================================================
+	CARDS PARA EL CARRUSEL DE "FEATURED PROJECTS" (index.html)
+	============================================================================ */
+	.feat-card {
+		background-color: #242943 !important;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		color: #ffffff;
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+
+	.feat-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+	}
+
+	.feat-card-img {
+		height: 170px;
+		object-fit: contain;
+		background-color: #1a1e33;
+		padding: 1.5rem;
+	}
+
+	/* Botón acento Python (Amarillo) */
+	.btn-feat-py {
+		background-color: #FFD43B !important;
+		color: #242943 !important;
+		font-weight: 700;
+		border: none;
+	}
+
+	/* Botón acento SQL (Naranja) */
+	.btn-feat-sql {
+		background-color: #F29111 !important;
+		color: #242943 !important;
+		font-weight: 700;
+		border: none;
+	}
+
+	.btn-feat-py:hover, .btn-feat-sql:hover {
+		background-color: #ffffff !important;
+	}
+
+	/* Separar las flechas del carrusel para que no tapen las tarjetas */
+	/* --- REPARACIÓN DE FLECHAS DEL CARRUSEL --- */
+	#carouselFeatured .carousel-control-prev,
+	#carouselFeatured .carousel-control-next {
+		width: 3.5rem !important;  /* Encaja exactamente en el padding lateral sin tocar la card */
+		height: 3.5rem !important; /* Las convierte en un botón cuadrado */
+		top: 50% !important;       /* Las baja al centro vertical absoluto */
+		bottom: auto !important;
+		transform: translateY(-50%);
+		opacity: 0.8;
+	}
+
+	#carouselFeatured .carousel-control-prev {
+		left: 0 !important;
+	}
+
+	#carouselFeatured .carousel-control-next {
+		right: 0 !important;
+	}
+
+	#carouselFeatured .carousel-control-prev:hover,
+	#carouselFeatured .carousel-control-next:hover {
+		opacity: 1;
+	}
+
+	/* ==========================================================================
+	[ EXTENSIÓN PERSONALIZADA DE MAURICIO ORTEGA v1.0 ]
+	Ubicación: Pegar exactamente en la última línea de main.css
+	========================================================================== */
+
+	/* --- 1. COLORES PERSONALIZADOS PARA BALDOSAS (SECTION #ONE) --- */
+	.tiles article.bg-mysql { background-color: #4479A1; }
+	.tiles article.bg-mysql::after { background-image: url('../../images/mysql.jpg'); }
+
+	.tiles article.bg-python { background-color: #467a9e; }
+	.tiles article.bg-python::after { background-image: url('../../images/python.png'); }
+
+	.tiles article.bg-github { background-color: #24292e; }
+	.tiles article.bg-github::after { background-image: url('../../images/github.svg.png'); }
+
+	.tiles article.bg-jira { background-color: #0052CC; }
+	.tiles article.bg-jira::after { background-image: url('../../images/jira.png'); }
+
+	.tiles article.bg-figma { background-color: #A259FF; }
+	.tiles article.bg-figma::after { background-image: url('../../images/figma.png'); }
+
+	/* Centrar automáticamente el último elemento de la grilla si queda impar */
+	#one.tiles article:last-child:nth-child(odd) {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	/* --- 2. TARJETAS DEL CARRUSEL DE "FEATURED PROJECTS" --- */
+	.feat-card {
+		background-color: #242943 !important;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		color: #ffffff;
+		transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	}
+
+	.feat-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+	}
+
+	.feat-card-img {
+		height: 170px;
+		object-fit: contain;
+		background-color: #1a1e33;
+		padding: 1.5rem;
+	}
+
+	/* Botón con acento amarillo (Python) */
+	.btn-feat-py {
+		background-color: #FFD43B !important;
+		color: #242943 !important;
+		font-weight: 700;
+		border: none;
+	}
+
+	/* Botón con acento naranja (MySQL) */
+	.btn-feat-sql {
+		background-color: #F29111 !important;
+		color: #242943 !important;
+		font-weight: 700;
+		border: none;
+	}
+
+	.btn-feat-py:hover, .btn-feat-sql:hover {
+		background-color: #ffffff !important;
+	}
+
+	/* Desplazar las flechas laterales para que no cubran el texto de las tarjetas */
+	#carouselFeatured .carousel-control-prev, #carouselFeatured .carousel-control-next {
+		width: 6% !important;
+	}
+
+	/* --- FLECHAS FUERA DE LAS CARDS --- */
+	#carouselFeatured .carousel-control-prev {
+		left: -3rem !important; /* Empuja la flecha hacia la izquierda fuera del carrusel */
+	}
+	#carouselFeatured .carousel-control-next {
+		right: -3rem !important; /* Empuja la flecha hacia la derecha fuera del carrusel */
+	}
+
+	/* --- FOOTER ALINEADO --- */
+	#footer .inner {
+		display: flex !important;
+		flex-direction: row !important;
+		justify-content: space-between !important;
+		align-items: center !important;
+		max-width: 65em;
+		margin: 0 auto;
+		padding: 0 2rem !important;
+	}
+
+	/* Asegurar que los iconos no se apilen */
+	#footer .icons {
+		margin: 0 !important;
+		padding: 0 !important;
+		display: flex;
+		gap: 1.25rem;
+		align-items: center;
+	}
+
+	/* ==========================================================================
+		➔ COMPATIBILIDAD Y CORRECCIÓN DE FORMATO PARA MODALES DESTACADOS
+	========================================================================== */
+
+	/* 1. Reset General de Fuentes y Tamaños para Evitar Distorsiones del Template */
+	.modal {
+		font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+		font-size: 16px !important; /* Evita los 17pt masivos de la plantilla */
+		line-height: 1.5 !important;
+	}
+
+	.modal h5.modal-title {
+		font-size: 1.4rem !important;
+		color: #ffffff !important;
+		margin-bottom: 0 !important;
+	}
+
+	/* Permitir que los encabezados sigan el color del contenedor (oscuro en SQL/Python) */
+	.modal-body h6 {
+		font-size: 1rem !important;
+		font-weight: 700 !important;
+		letter-spacing: 0.05em !important;
+		text-transform: uppercase !important;
+		color: #141f28 !important;
+		margin-bottom: 0.75rem !important;
+	}
+
+	.modal-body p {
+		font-size: 0.95rem !important;
+		margin-bottom: 1rem !important;
+		line-height: 1.6 !important;
+	}
+
+	/* Cancelar el borde punteado global que la plantilla le pone a todos los enlaces */
+	.modal a, 
+	.modal .nav-link, 
+	.modal .btn {
+		border-bottom: none !important;
+		text-decoration: none !important;
+	}
+
+	/* 2. Corrección para Listas (ul / li) en el Cuerpo de los Modales */
+	.modal-body ul {
+		list-style: disc !important;
+		margin: 0 0 1.5rem 0 !important;
+		padding-left: 1.25rem !important;
+	}
+
+	.modal-body ul li {
+		font-size: 0.95rem !important;
+		padding-left: 0 !important;
+		margin-bottom: 0.4rem !important;
+		color: inherit !important; /* Hereda el color oscuro configurado para el modal */
+	}
+
+	/* 3. Estilizado de Pestañas (Tabs) del Modal de SQL */
+	.modal .nav-tabs {
+		border-bottom: 2px solid rgba(0, 0, 0, 0.15) !important;
+		margin-bottom: 1rem !important;
+	}
+
+	.modal .nav-tabs .nav-link {
+		color: rgba(31, 45, 37, 0.65) !important;
+		background: transparent !important;
+		font-size: 0.85rem !important;
+		font-weight: 600 !important;
+		text-transform: uppercase !important;
+		letter-spacing: 0.05em !important;
+		padding: 0.5rem 1rem !important;
+		border: none !important;
+		border-bottom: 3px solid transparent !important;
+		transition: all 0.2s ease-in-out !important;
+	}
+
+	.modal .nav-tabs .nav-link:hover {
+		color: #1f2d25 !important;
+		border-bottom-color: rgba(31, 45, 37, 0.3) !important;
+	}
+
+	.modal .nav-tabs .nav-link.active {
+		color: #1f2d25 !important;
+		font-weight: 700 !important;
+		border-bottom: 3px solid #1f2d25 !important;
+	}
+
+	/* 4. Estilizado de Botones de Acción (Footer del Modal) */
+
+	/* Botón de GitHub */
+	.modal .btn-github {
+		background-color: #24292e !important;
+		color: #ffffff !important;
+		border-radius: 4px !important;
+		padding: 0.5rem 1.25rem !important;
+		font-size: 0.8em !important;
+		font-weight: 600 !important;
+		letter-spacing: 0.1em !important;
+		text-transform: uppercase !important;
+		display: inline-flex !important;
+		align-items: center !important;
+		gap: 0.5rem !important;
+		height: auto !important;
+		line-height: normal !important;
+		box-shadow: none !important;
+	}
+
+	.modal .btn-github:hover {
+		background-color: #000000 !important;
+		color: #ffffff !important;
+	}
+
+	/* Botón Cerrar Visualizador */
+	.modal .btn-modal-close {
+		background-color: transparent !important;
+		color: inherit !important;
+		box-shadow: inset 0 0 0 2px currentColor !important;
+		border-radius: 4px !important;
+		padding: 0.5rem 1.25rem !important;
+		font-size: 0.8em !important;
+		font-weight: 600 !important;
+		letter-spacing: 0.1em !important;
+		text-transform: uppercase !important;
+		height: auto !important;
+		line-height: normal !important;
+		transition: background-color 0.2s, color 0.2s !important;
+	}
+
+	.modal .btn-modal-close:hover {
+		background-color: #ffffff !important;
+		color: #242943 !important;
+		box-shadow: inset 0 0 0 2px #ffffff !important;
+	}
+
+	/* Corrección de la X de cierre de Bootstrap en el Header */
+	.modal .btn-close {
+		background-size: 0.8rem !important;
+		opacity: 0.5 !important;
+		box-shadow: none !important;
+	}
+	.modal .btn-close:hover {
+		opacity: 1 !important;
+	}
+
+	/* ==========================================================================
+		FIXES FINALES: UI DE BOTONES, Z-INDEX Y CARRUSEL
+	========================================================================== */
+
+	/* 1. Adiós al contorno blanco fantasma de la plantilla en los botones View Details */
+	.btn-feat-py, .btn-feat-sql {
+		box-shadow: none !important;
+		outline: none !important;
+		border: none !important;
+	}
+
+	/* 2. Geometría idéntica para los botones inferiores del Modal (Misma altura y caja) */
+	.modal .btn-github, 
+	.modal .btn-modal-close {
+		height: 42px !important;               /* Altura milimétricamente idéntica */
+		box-sizing: border-box !important;     /* Evita que los bordes sumen tamaño extra */
+		padding: 0 1.5rem !important;          
+		display: inline-flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		margin: 0 !important;
+	}
+
+	/* 3. "Z-Index Dios": Obligar al Modal a flotar POR ENCIMA de la barra de navegación */
+	.modal {
+		z-index: 100000 !important; /* El nav de Forty tiene 10000, nosotros le ponemos 100000 */
+	}
+	.modal-backdrop {
+		z-index: 99999 !important;
+	}
+	.modal-dialog {
+		margin-top: 4.5rem !important; /* Despega un poco el modal del techo para que respire */
+	}
+
+	/* 4. Limpiar cualquier recuadro, fondo o anillo de focus de las flechas del carrusel */
+	#carouselFeatured .carousel-control-prev,
+	#carouselFeatured .carousel-control-next,
+	#carouselFeatured .carousel-control-prev:focus,
+	#carouselFeatured .carousel-control-next:focus,
+	#carouselFeatured .carousel-control-prev:active,
+	#carouselFeatured .carousel-control-next:active {
+		border: none !important;
+		box-shadow: none !important;
+		outline: none !important;
+		background: transparent !important;
 	}

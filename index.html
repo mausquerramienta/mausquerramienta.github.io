@@ -1,248 +1,463 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>My portfolio, by mausquerramienta</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio by mausquerramienta</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <div id="wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>by mausquerramienta</strong></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
+		<!-- Header -->
+        <header id="header" class="alt">
+            <a href="index.html" class="logo"><strong>by mausquerramienta</strong></a>
+            <nav><a href="#menu">Menu</a></nav>
+        </header>
+		<!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="#banner" class="scrolly">Home</a></li>
+                <li><a href="#about" class="scrolly">About me</a></li>
+                <li><a href="#cv" class="scrolly">CV</a></li>
+                <li><a href="#languages" class="scrolly">Tech Stack</a></li>
+                <li><a href="#projects" class="scrolly">Projects</a></li>
+                <li><a href="#featured-projects" class="scrolly">Featured projects</a></li>
+                <li><a href="#one" class="scrolly">Projects by Technology</a></li>
+                <li><a href="#contact" class="scrolly">Contact me</a></li>
+            </ul>
+        </nav>
+		<!-- Banner -->
+        <section id="banner" class="major">
+            <div class="inner">
+                <header class="major">
+                    <h1>Welcome to my portfolio!</h1>
+                </header>
+                <div class="content">
+                    <p>Hi, I'm Mauricio and this is my portfolio. I am a software developer passionate about solving complex problems through clean code and systematic design. Take a look around to see my work.</p>
+                    <ul class="actions">
+                        <li><a href="#about" class="button next scrolly">Get Started</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div id="main">
+
+			<!-- About -->
+            <section id="about">
+                <div class="inner">
+                    <header class="major"><h2>About Me</h2></header>
+					<p>Bilingual Junior Java Full Stack Developer with a background in Industrial Engineering. I have experience solving technological projects focused on client needs, combining analysis, teamwork, and problem-solving skills. I bring value to companies through the systematic restructuring and development of projects; ensuring strict adherence to regulations, proper technical documentation of processes, and a thorough review to ensure every delivery is in perfect order. I am characterized by my analytical thinking, attention to detail, and effective communication with diverse teams.</p>
+					<p><strong>Interests:</strong> Web development, cloud services, plants, basketball, and books.</p>
+				</div>
+            </section>
+			<!-- CV -->
+            <section id="cv">
+                <div class="inner">
+                    <header class="major text-center mb-4"><h2>Curriculum Vitae</h2></header>
+                    
+                    <div style="max-width: 820px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.4); border-radius: 8px; overflow: hidden; background-color: #1a1e33;">
+                        <iframe src="assets/CV_Mauricio_Ortega.pdf#toolbar=0&view=FitH" width="100%" style="aspect-ratio: 1 / 1.415; border: none; display: block;" title="CV Mauricio Ortega">
+                            <p>Tu navegador no soporta previsualización de PDFs. <a href="assets/CV_Mauricio_Ortega.pdf">Descarga mi CV aquí</a>.</p>
+                        </iframe>
+                    </div>
+
+                    <div class="text-center" style="margin-top: 3.5rem;">
+                        <a href="assets/CV_Mauricio_Ortega.pdf" target="_blank" download="CV_Mauricio_Ortega.pdf" class="button primary icon solid fa-download">
+                            Descargar CV en PDF
+                        </a>
+                    </div>
+                </div>
+            </section>
+			<!-- Tech Stack -->
+            <section id="languages">
+                <div class="inner">
+                    <header class="major"><h2>Tech Stack</h2></header>
+                    <p>I build robust applications using <strong>Java</strong>, <strong>Spring Boot</strong>, and <strong>MySQL</strong> for efficient backend architectures and database management. On the frontend, I create responsive interfaces using <strong>HTML5, CSS3,</strong> and <strong>JavaScript</strong>. I also utilize <strong>Python</strong> for algorithmic problem-solving, leveraging my engineering background to write structured and scalable code.</p>
+                </div>
+            </section>
+			<!-- Projects -->
+			<section id="projects">
+				<div class="inner">
+					<header class="major">
+						<h2>Projects</h2>
 					</header>
+					<p>Explore my work through the categories below. Each section showcases projects where I have applied my technical skills to build functional and well-documented solutions. Click on any technology—<strong>HTML, CSS, JavaScript, Java,</strong> or <strong>Python</strong>—to discover specific repositories, including e-commerce platforms, interactive games, and logical simulations.</p>
+				</div>
+			</section>
+			<!-- Featured Projects -->
+            <section id="featured-projects">
+                <div class="inner">
+                    <header class="major mb-5"><h2>Featured Projects</h2></header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="#about" class="scrolly">About me</a></li>
-							<li><a href="#cv" class="scrolly">CV</a></li>
-							<li><a href="#languages" class="scrolly">Tech Stack</a></li>
-							<li><a href="#projects" class="scrolly">Projects</a></li>
-							<li><a href="#featured-projects" class="scrolly">Featured projects</a></li>
-							<li><a href="#one" class="scrolly">Projects by Technology</a></li>
-							<li><a href="#contact" class="scrolly">Contact me</a></li>
-						</ul>
-					</nav>
+                    <div id="carouselFeatured" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner" style="padding: 0 3.5rem;">
+                            
+                            <div class="carousel-item active">
+                                <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                                    <div class="col">
+                                        <div class="card feat-card h-100">
+                                            <img src="images/python.png" class="card-img-top feat-card-img" alt="Python">
+                                            <div class="card-body d-flex flex-column">
+                                                <h5 class="card-title fw-bold">01 - Name Creator <span class="badge bg-secondary ms-2 small">Python</span></h5>
+                                                <p class="card-text mb-4">A dynamic string concatenation tool utilizing standard I/O operations and type-casting.</p>
+                                                <button type="button" class="btn btn-feat-py mt-auto" data-bs-toggle="modal" data-bs-target="#modal-feat-py-1">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card feat-card h-100">
+                                            <img src="images/mysql.jpg" class="card-img-top feat-card-img" alt="SQL">
+                                            <div class="card-body d-flex flex-column">
+                                                <h5 class="card-title fw-bold">01 - Fundamental Queries <span class="badge bg-secondary ms-2 small">MySQL</span></h5>
+                                                <p class="card-text mb-4">Data extraction, result grouping, mathematical aggregates, and sorting limits.</p>
+                                                <button type="button" class="btn btn-feat-sql mt-auto" data-bs-toggle="modal" data-bs-target="#modal-feat-sql-1">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Welcome to my portfolio!</h1>
-							</header>
-							<div class="content">
-								<p>Hi, I'm Mauricio and this is my portfolio. I am a software developer passionate about solving complex problems through clean code and systematic design. Take a look around to see my work.</p>
-								<ul class="actions">
-									<li><a href="#about" class="button next scrolly">Get Started</a></li>
-								</ul>
-							</div>
+                            <div class="carousel-item">
+                                <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                                    <div class="col">
+                                        <div class="card feat-card h-100">
+                                            <img src="images/python.png" class="card-img-top feat-card-img" alt="Python">
+                                            <div class="card-body d-flex flex-column">
+                                                <h5 class="card-title fw-bold">02 - Commission Calculator <span class="badge bg-secondary ms-2 small">Python</span></h5>
+                                                <p class="card-text mb-4">Financial algorithm applying arithmetic operators, variable states, and string formatting.</p>
+                                                <button type="button" class="btn btn-feat-py mt-auto" data-bs-toggle="modal" data-bs-target="#modal-feat-py-2">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card feat-card h-100">
+                                            <img src="images/mysql.jpg" class="card-img-top feat-card-img" alt="SQL">
+                                            <div class="card-body d-flex flex-column">
+                                                <h5 class="card-title fw-bold">02 - Relational Joins <span class="badge bg-secondary ms-2 small">MySQL</span></h5>
+                                                <p class="card-text mb-4">Resolving 1:N and N:M relationships utilizing directional table junctions.</p>
+                                                <button type="button" class="btn btn-feat-sql mt-auto" data-bs-toggle="modal" data-bs-target="#modal-feat-sql-2">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeatured" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFeatured" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+			<!-- Projects by Technology -->
+            <section id="one" class="tiles">
+    
+                <article class="bg-html">
+                    <header class="major">
+                        <h3>
+                            <a href="#modal-construction" class="stretched-link text-white text-decoration-none" data-bs-toggle="modal">HTML</a>
+                        </h3>
+                        <p>Click to paradise.</p>
+                    </header>
+                </article>
+
+                <article class="bg-css">
+                    <header class="major">
+                        <h3>
+                            <a href="#modal-construction" class="stretched-link text-white text-decoration-none" data-bs-toggle="modal">CSS</a>
+                        </h3>
+                        <p>Click to paradise.</p>
+                    </header>
+                </article>
+
+                <article class="bg-js">
+                    <header class="major">
+                        <h3>
+                            <a href="#modal-construction" class="stretched-link text-white text-decoration-none" data-bs-toggle="modal">JavaScript</a>
+                        </h3>
+                        <p>Click to paradise.</p>
+                    </header>
+                </article>
+
+                <article class="bg-java">
+                    <header class="major">
+                        <h3>
+                            <a href="#modal-construction" class="stretched-link text-white text-decoration-none" data-bs-toggle="modal">Java</a>
+                        </h3>
+                        <p>Click to paradise.</p>
+                    </header>
+                </article>
+
+                <article class="bg-python">
+                    <header class="major">
+                        <h3>
+                            <a href="projects/python.html" class="link">Python</a>
+                        </h3>
+                        <p>Click to paradise.</p>
+                    </header>
+                </article>
+
+                <article class="bg-mysql">
+                    <header class="major">
+                        <h3>
+                            <a href="projects/sql.html" class="link">MySQL</a>
+                        </h3>
+                        <p>Click to paradise.</p>
+                    </header>
+                </article>
+
+            </section>
+			<!-- Tools & Workflows -->
+			<section id="tools-intro">
+				<div class="inner">
+					<header class="major">
+						<h2>Tools & Workflows</h2>
+					</header>
+					<p>These are the core tools I use daily to manage versions, design user interfaces, and coordinate agile projects effectively.</p>
+				</div>
+			</section>
+			<section id="tools-tiles" class="tiles">
+				<article class="bg-github">
+					<header class="major">
+						<h3>
+							<a href="#" class="link">GitHub</a>
+						</h3>
+						<p>Control de versiones y colaboración</p>
+					</header>
+				</article>
+				<article class="bg-jira">
+					<header class="major">
+						<h3>
+							<a href="#" class="link">Jira</a>
+						</h3>
+						<p>Gestión ágil de proyectos (Scrum)</p>
+					</header>
+				</article>
+				<article class="bg-figma">
+					<header class="major">
+						<h3>
+							<a href="#" class="link">Figma</a>
+						</h3>
+						<p>Diseño de interfaces (UI/UX)</p>
+					</header>
+				</article>
+			</section>
+        </div>
+		<!-- Contact -->
+		<section id="contact">
+            <div class="inner">
+				<header class="major">
+					<h2>Contact Me</h2>
+                </header>
+                <section class="split">
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon brands alt fa-github"></span>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/mausquerramienta" target="_blank">/mausquerramienta</a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon brands alt fa-linkedin-in"></span>
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/mauricio-ortegaj" target="_blank">Mauricio Ortega Jiménez</a>
+                        </div>
+                    </section>
+					<section>
+						<div class="contact-method">
+							<span class="icon alt fa-envelope"></span>
+							<h3>Email</h3>
+							<a href="mailto:mauricio.ortegaj@gmail.com">mauricio.oj@outlook.com</a>
 						</div>
 					</section>
+                </section>
+            </div>
+        </section>
 
-				<!-- Main -->
-					<div id="main">
+		<!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://github.com/mausquerramienta" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/mauricio-ortegaj" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+                </ul>
+                <ul class="copyright">
+					<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+            </div>
+        </footer>
 
-						<!-- Two -->
-							<section id="about">
-								<div class="inner">
-									<header class="major">
-										<h2>About me</h2>
-									</header>
-									<p>Bilingual Junior Java Full Stack Developer with a background in Industrial Engineering. I have experience solving technological projects focused on client needs, combining analysis, teamwork, and problem-solving skills. I bring value to companies through the systematic restructuring and development of projects; ensuring strict adherence to regulations, proper technical documentation of processes, and a thorough review to ensure every delivery is in perfect order. I am characterized by my analytical thinking, attention to detail, and effective communication with diverse teams.</p>
-        							<p><strong>Interests:</strong> Web development, cloud services, plants, basketball, and books.</p>
-								</div>
-							</section>
+    </div> 
 
-							<section id="cv">
-								<div class="inner">
-									<header class="major text-center mb-4">
-										<h2>Curriculum Vitae</h2>
-									</header>
+	<!-- Modals -->
+	<div class="modal fade" id="modal-feat-py-1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: #467a9e; color: #141f28;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold text-white">01 - Name Creator (Python)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-dark mb-2">🧠 Core Concepts Applied</h6>
+                    <ul>
+                        <li>Memory assignment and dynamic variable states.</li>
+                        <li>Standard Input/Output logic (<code>print</code>, <code>input</code>).</li>
+                        <li>String literal concatenation.</li>
+                    </ul>
+                    <p class="mb-3">This program prompts the user for specific data points and merges them into a cohesive brand name.</p>
+                    <div class="card card-body bg-dark p-0 border-secondary mt-4">
+                        <iframe src="https://trinket.io/embed/python3/0dce0dac1476" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <a href="https://github.com/mausquerramienta/Python-Toolkit/tree/main/01-name-creator" target="_blank" class="btn btn-github">
+                        <span class="icon brands fa-github" style="font-size: 1.15rem;"></span>
+                        <span>GitHub Code</span>
+                    </a>
+                    <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-									<div style="max-width: 820px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.4); border-radius: 8px; overflow: hidden; background-color: #1a1e33;">
-										
-										<iframe src="assets/CV_Mauricio_Ortega.pdf#toolbar=0&view=FitH" width="100%" style="aspect-ratio: 1 / 1.415; border: none; display: block;" title="CV Mauricio Ortega">
-											<p>Tu navegador no soporta la previsualización de PDFs. <a href="assets/CV_Mauricio_Ortega.pdf">Descarga mi CV aquí</a>.</p>
-										</iframe>
+    <div class="modal fade" id="modal-feat-sql-1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: #87c5a4; color: #1f2d25;">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">01 - Fundamental Queries</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-dark mb-2">🧠 Core Concepts Applied</h6>
+                    <ul>
+                        <li>Data extraction and column aliasing (<code>SELECT</code>, <code>AS</code>).</li>
+                        <li>Result set collapsing (<code>GROUP BY</code>).</li>
+                        <li>Mathematical aggregations (<code>COUNT()</code>, <code>AVG()</code>).</li>
+                    </ul>
+                    <p class="mb-4">Transforms raw operational data into analytical insights without relying on complex table junctions.</p>                        
+                    <ul class="nav nav-tabs mb-3" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="tab-runner-1" data-bs-toggle="tab" data-bs-target="#canvas-runner-1" type="button" role="tab">
+                                ▶ Live Query Runner
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab-schema-1" data-bs-toggle="tab" data-bs-target="#canvas-schema-1" type="button" role="tab">
+                                📐 Interactive Schema (ERD)
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="canvas-runner-1" role="tabpanel">
+                            <div class="card card-body bg-dark p-0 border-secondary">
+                                <iframe src="https://onecompiler.com/mysql/44t6ux6uk?hideLanguageSelection=true&hideTitle=true" width="100%" height="420" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="canvas-schema-1" role="tabpanel">
+                            <div class="card card-body bg-dark p-0 border-secondary">
+                                <iframe src="https://dbdiagram.io/e/6a3aed14d0074fe75d0a851e/6a3aed1ad0074fe75d0a8557" width="100%" height="450" frameborder="0" style="background: #ffffff;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <a href="https://github.com/mausquerramienta/SQL-Toolkit/tree/main/01-fundamental-queries" target="_blank" class="btn btn-github">
+                        <span class="icon brands fa-github" style="font-size: 1.15rem;"></span>
+                        <span>GitHub Code</span>
+                    </a>
+                    <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-									</div>
+    <div class="modal fade" id="modal-feat-py-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: #467a9e; color: #141f28;">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">02 - Commission Calculator</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-dark mb-2">🧠 Core Concepts Applied</h6>
+                    <ul>
+                        <li>Input sanitization and explicit type-casting (<code>float()</code>).</li>
+                        <li>Arithmetic operators and float rounding.</li>
+                        <li>Dynamic <i>f-string</i> interpolation.</li>
+                    </ul>
+                    <p class="mb-3">A financial algorithm computing a fixed 13% commission rate over raw sales revenue.</p>
+                
+                    <div class="card card-body bg-dark p-0 border-secondary mt-4">
+                        <iframe src="https://trinket.io/embed/python3/ebf1c2c71de5" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <a href="https://github.com/mausquerramienta/Python-Toolkit/tree/main/02-commission-calculator" target="_blank" class="btn btn-github">
+                        <span class="icon brands fa-github"></span><span>GitHub Code</span>
+                    </a>
+                    <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-									<div class="text-center" style="margin-top: 3.5rem;">
-										<a href="assets/CV_Mauricio_Ortega.pdf" target="_blank" download="CV_Mauricio_Ortega.pdf" class="button primary icon solid fa-download">
-											Descargar CV en PDF
-										</a>
-									</div>
+    <div class="modal fade" id="modal-proj-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">02 - Relational Joins</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><p>Aquí irá el contenido del proyecto 2...</p></div>
+                <div class="modal-footer justify-content-between">
+                    <a href="#" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
+                    <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-								</div>
-							</section>
-
-							<section id="languages">
-								<div class="inner">
-									<header class="major">
-										<h2>Tech Stack</h2>
-									</header>
-									<p>I build robust applications using <strong>Java</strong>, <strong>Spring Boot</strong>, and <strong>MySQL</strong> for efficient backend architectures and database management. On the frontend, I create responsive interfaces using <strong>HTML5, CSS3,</strong> and <strong>JavaScript</strong>. I also utilize <strong>Python</strong> for algorithmic problem-solving, leveraging my engineering background to write structured and scalable code.</p>								</div>
-							</section>
-
-							<section id="projects">
-								<div class="inner">
-									<header class="major">
-										<h2>Projects</h2>
-									</header>
-									<p>Explore my work through the categories below. Each section showcases projects where I have applied my technical skills to build functional and well-documented solutions. Click on any technology—<strong>HTML, CSS, JavaScript, Java,</strong> or <strong>Python</strong>—to discover specific repositories, including e-commerce platforms, interactive games, and logical simulations.</p>
-								</div>
-							</section>
-
-							<section id="featured-projects">
-								<div class="inner">
-									<header class="major">
-										<h2>Featured Projects</h2>
-									</header>
-									<p>A showcase of my most robust applications, ranging from interactive logic tools to full e-commerce platforms. These projects highlight my ability to integrate clean frontend interfaces with solid backend architectures and systematic data management. Browse through the gallery below to explore them.</p>
-									
-									<div class="carousel-container" style="margin-top: 2rem; margin-bottom: 3rem;">
-										
-									</div>
-								</div>
-							</section>
-
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article class="bg-html">
-									<header class="major">
-										<h3><a href="landing.html" class="link">HTML</a></h3>
-										<p>Click to paradise.</p>
-									</header>
-								</article>
-								<article class="bg-css">
-									<header class="major">
-										<h3><a href="landing.html" class="link">CSS</a></h3>
-										<p>Click to paradise.</p>
-									</header>
-								</article>
-								<article class="bg-js">
-									<header class="major">
-										<h3><a href="landing.html" class="link">JavaScript</a></h3>
-										<p>Click to paradise.</p>
-									</header>
-								</article>
-								<article class="bg-java">
-									<header class="major">
-										<h3><a href="landing.html" class="link">Java</a></h3>
-										<p>Click to paradise.</p>
-									</header>
-								</article>
-								<article class="bg-python">
-									<header class="major">
-										<h3><a href="projects/python.html" class="link">Python</a></h3>
-										<p>Click to paradise.</p>
-									</header>
-								</article>
-								<article class="bg-mysql">
-									<header class="major">
-										<h3><a href="projects/sql.html" class="link">MySQL</a></h3>
-										<p>Gestión de Bases de Datos</p>
-									</header>
-								</article>
-
-					</div>
-
-					<section id="tools-intro">
-						<div class="inner">
-							<header class="major">
-								<h2>Tools & Workflows</h2>
-							</header>
-							<p>These are the core tools I use daily to manage versions, design user interfaces, and coordinate agile projects effectively.</p>
-						</div>
-					</section>
-
-					<section id="tools-tiles" class="tiles">
-						<article class="bg-github">
-							<header class="major">
-								<h3><a href="#" class="link">GitHub</a></h3>
-								<p>Control de versiones y colaboración</p>
-							</header>
-						</article>
-
-						<article class="bg-jira">
-							<header class="major">
-								<h3><a href="#" class="link">Jira</a></h3>
-								<p>Gestión ágil de proyectos (Scrum)</p>
-							</header>
-						</article>
-
-						<article class="bg-figma">
-							<header class="major">
-								<h3><a href="#" class="link">Figma</a></h3>
-								<p>Diseño de interfaces (UI/UX)</p>
-							</header>
-						</article>
-					</section>
-
-				<!-- Contact -->
-
-					<section id="contact">
-						<div class="inner">
-							<header class="major">
-								<h2>Contact me</h2>
-							</header>
-							
-							<div class="contact-method-container" style="display: flex; flex-wrap: wrap; gap: 2rem;">
-								<section style="flex: 1; min-width: 300px;">
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="mailto:mauricio.ortega.bm@gmail.com">mauricio.ortega.bm@gmail.com</a>
-									</div>
-								</section>
-
-								<section style="flex: 1; min-width: 300px;">
-									<div class="contact-method" style="margin-bottom: 2rem;">
-										<span class="icon brands alt fa-github"></span>
-										<h3>GitHub</h3>
-										<a href="https://github.com/mausquerramienta" target="_blank">/mausquerramienta</a>
-									</div>
-									<div class="contact-method">
-										<span class="icon brands alt fa-linkedin-in"></span>
-										<h3>LinkedIn</h3>
-										<a href="https://www.linkedin.com/in/mauricio-ortegaj" target="_blank">Mauricio Ortega Jiménez</a> </div>
-									</div>
-								</section>
-							</div>
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://github.com/mausquerramienta" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/mauricio-ortegaj" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
+	<!-- Modal de "En Construcción" -->
+	<div class="modal fade" id="modal-construction" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content" style="background-color: #2a2f4a; color: #ffffff; border: 1px solid rgba(255,255,255,0.1);">
+				<div class="modal-header border-0">
+					<h5 class="modal-title">Work in Progress</h5>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body text-center p-4">
+					<p>This category is currently under construction. I'm working hard to bring you the best content soon!</p>
+				</div>
 			</div>
+		</div>
+	</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-	</body>
+    <script>
+        document.addEventListener('shown.bs.tab', function (e) {
+            if (e.target.id === 'feat-tab-sch-1') {
+                let ifr = document.querySelector('#feat-sch-1 iframe');
+                ifr.src = ifr.src; 
+            }
+        });
+    </script>
+
+</body>
 </html>
