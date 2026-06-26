@@ -71,8 +71,8 @@
                     <div class="card h-100">
                         <img src="../images/mysql.jpg" class="card-img-top" alt="Project Thumbnail">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">03 - Subqueries</h5>
-                            <p class="card-text mb-4">Utilizing nested queries to filter and aggregate data based on dynamic conditions.</p>
+                            <h5 class="card-title">03 - Subqueries & Aggregations</h5>
+                            <p class="card-text mb-4">Dynamic dataset filtering using nested subqueries and derived tables to bypass MySQL limitations.</p>
                             <button type="button" class="btn btn-view-details mt-auto" data-bs-toggle="modal" data-bs-target="#modal-proj-3">
                                 View Details
                             </button>
@@ -84,8 +84,8 @@
                     <div class="card h-100">
                         <img src="../images/mysql.jpg" class="card-img-top" alt="Project Thumbnail">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">04 - Window Functions</h5>
-                            <p class="card-text mb-4">Applying analytical functions to perform calculations across a set of rows related to the current row.</p>
+                            <h5 class="card-title">04 - Common Table Expressions</h5>
+                            <p class="card-text mb-4">Decoupling independent multi-step aggregations into modular, sequential CTE blocks.</p>
                             <button type="button" class="btn btn-view-details mt-auto" data-bs-toggle="modal" data-bs-target="#modal-proj-4">
                                 View Details
                             </button>
@@ -154,15 +154,32 @@
         </div>
         <!-- Modal for Project 2 -->
         <div class="modal fade" id="modal-proj-2" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header border-0">
                         <h5 class="modal-title fw-bold">02 - Relational Joins</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body"><p>Aquí irá el contenido del proyecto 2...</p></div>
+                    <div class="modal-body">
+                        <h6 class="mb-2 fw-bold">🧠 Core Concepts Applied</h6>
+                        <ul>
+                            <li>Directional table junctions (<code>INNER JOIN</code>, <code>LEFT JOIN</code>).</li>
+                            <li>Resolving 1:N and N:M database relationships.</li>
+                            <li>Multi-table filtering across primary and foreign keys.</li>
+                        </ul>
+                        <p class="mb-4">Connects isolated dimension and fact tables to rebuild complete business entities.</p>
+                        
+                        <ul class="nav nav-tabs mb-3" role="tablist">
+                            <li class="nav-item"><button class="nav-link active fw-bold" data-bs-toggle="tab" data-bs-target="#run-sql-2" type="button">▶ Live Runner</button></li>
+                            <li class="nav-item"><button class="nav-link fw-bold" id="tab-schema-2" data-bs-toggle="tab" data-bs-target="#schema-sql-2" type="button">📐 ERD Schema</button></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="run-sql-2"><div class="card card-body bg-dark p-0"><iframe src="https://onecompiler.com/embed/mysql/44td8nw77?hideLanguageSelection=true&hideTitle=true" width="100%" height="420" frameborder="0"></iframe></div></div>
+                            <div class="tab-pane fade" id="schema-sql-2"><div class="card card-body bg-dark p-0"><iframe src="https://dbdiagram.io/e/6a3aed14d0074fe75d0a851e/6a3aed1ad0074fe75d0a8557" width="100%" height="450" frameborder="0" style="background:#fff;"></iframe></div></div>
+                        </div>
+                    </div>
                     <div class="modal-footer justify-content-between">
-                        <a href="#" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
+                        <a href="https://github.com/mausquerramienta/SQL-Toolkit/tree/main/02-relational-joins" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
                         <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
                     </div>
                 </div>
@@ -171,15 +188,32 @@
 
         <!-- Modal for Project 3 -->
         <div class="modal fade" id="modal-proj-3" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title fw-bold">03 - Subqueries</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div class="modal-body"><p>Aquí irá el contenido del proyecto 3...</p></div>
+                    <div class="modal-body">
+                        <h6 class="mb-2 fw-bold">🧠 Core Concepts Applied</h6>
+                        <ul>
+                            <li>Nested Subqueries (<code>WHERE ... IN</code>) for dynamic dataset filtering.</li>
+                            <li>Derived Tables (<code>AS top3</code>) to bypass MySQL restrictions on <code>LIMIT</code> inside <code>IN</code>.</li>
+                            <li>Multi-table joins combined with <code>AVG()</code> and <code>ROUND()</code> analytical metrics.</li>
+                        </ul>
+                        <p class="mb-4">Identifies shows from the top three most popular TV genres and calculates their overall average IMDb rating based on individual episode performance.</p>
+                        
+                        <ul class="nav nav-tabs mb-3" role="tablist">
+                            <li class="nav-item"><button class="nav-link active fw-bold" data-bs-toggle="tab" data-bs-target="#run-sql-3" type="button">▶ Live Runner</button></li>
+                            <li class="nav-item"><button class="nav-link fw-bold" id="tab-schema-3" data-bs-toggle="tab" data-bs-target="#schema-sql-3" type="button">📐 ERD Schema</button></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="run-sql-3"><div class="card card-body bg-dark p-0"><iframe src="https://onecompiler.com/embed/mysql/44tdb8fn6?hideLanguageSelection=true&hideTitle=true" width="100%" height="420" frameborder="0"></iframe></div></div>
+                            <div class="tab-pane fade" id="schema-sql-3"><div class="card card-body bg-dark p-0"><iframe src="https://dbdiagram.io/e/6a3aed14d0074fe75d0a851e/6a3aed1ad0074fe75d0a8557" width="100%" height="450" frameborder="0" style="background:#fff;"></iframe></div></div>
+                        </div>
+                    </div>
                     <div class="modal-footer justify-content-between">
-                        <a href="#" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
+                        <a href="https://github.com/mausquerramienta/SQL-Toolkit/tree/main/03-subqueries-and-aggregations" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
                         <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
                     </div>
                 </div>
@@ -188,15 +222,32 @@
 
         <!-- Modal for Project 4 -->
         <div class="modal fade" id="modal-proj-4" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title fw-bold">04 - Window Functions</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div class="modal-body"><p>Aquí irá el contenido del proyecto 4...</p></div>
+                    <div class="modal-body">
+                        <h6 class="mb-2 fw-bold">🧠 Core Concepts Applied</h6>
+                        <ul>
+                            <li>Common Table Expressions (<code>WITH</code> clause) for modular query architecture.</li>
+                            <li>Chaining sequential CTEs (<code>ShowAverages</code>, <code>ShowTotals</code>) to avoid deep subquery nesting.</li>
+                            <li>Multi-table joins uniting dimension tables with multiple derived fact tables simultaneously.</li>
+                        </ul>
+                        <p class="mb-4">Evaluates overall TV series success by decoupling volume metrics (total episodes) from quality metrics (average audience rating) into clean, readable blocks.</p>
+                        
+                        <ul class="nav nav-tabs mb-3" role="tablist">
+                            <li class="nav-item"><button class="nav-link active fw-bold" data-bs-toggle="tab" data-bs-target="#run-sql-4" type="button">▶ Live Runner</button></li>
+                            <li class="nav-item"><button class="nav-link fw-bold" id="tab-schema-4" data-bs-toggle="tab" data-bs-target="#schema-sql-4" type="button">📐 ERD Schema</button></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="run-sql-4"><div class="card card-body bg-dark p-0"><iframe src="https://onecompiler.com/embed/mysql/44tdbcbux?hideLanguageSelection=true&hideTitle=true" width="100%" height="420" frameborder="0"></iframe></div></div>
+                            <div class="tab-pane fade" id="schema-sql-4"><div class="card card-body bg-dark p-0"><iframe src="https://dbdiagram.io/e/6a3aed14d0074fe75d0a851e/6a3aed1ad0074fe75d0a8557" width="100%" height="450" frameborder="0" style="background:#fff;"></iframe></div></div>
+                        </div>
+                    </div>
                     <div class="modal-footer justify-content-between">
-                        <a href="#" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
+                        <a href="https://github.com/mausquerramienta/SQL-Toolkit/tree/main/04-common-table-expressions" target="_blank" class="btn btn-github"><span class="icon brands fa-github"></span><span>GitHub Code</span></a>
                         <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">Close Viewer</button>
                     </div>
                 </div>
@@ -228,8 +279,20 @@
     <script>
         document.addEventListener('shown.bs.tab', function (event) {
             if (event.target.id === 'tab-schema-1') {
-                let iframe = document.querySelector('#canvas-schema-1 iframe');
-                iframe.src = iframe.src; 
+                let ifr = document.querySelector('#schema-sql-1 iframe');
+                ifr.src = ifr.src; 
+            }
+            if (event.target.id === 'tab-schema-2') {
+                let ifr = document.querySelector('#schema-sql-2 iframe');
+                ifr.src = ifr.src; 
+            }
+            if (event.target.id === 'tab-schema-3') {
+                let ifr = document.querySelector('#schema-sql-3 iframe');
+                ifr.src = ifr.src; 
+            }
+            if (event.target.id === 'tab-schema-4') {
+                let ifr = document.querySelector('#schema-sql-4 iframe');
+                ifr.src = ifr.src; 
             }
         });
     </script>
